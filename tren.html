@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tren Photography</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home">
+    <div class="video-background">
+      <video autoplay loop muted id="video">
+        <source src="file:///C:\Users\being\OneDrive\Desktop\New folder\video_20230705_140321_edit.mp4" type="video/mp4">
+      </video>
+      <button id="muteButton" onclick="toggleMute()">Mute</button>
+    </div>
+    <div class="hero-text">
+      <h1>Welcome to Tren Photography</h1>
+      <p>Capturing your most memorable moments.</p>
+      <a href="#contact" class="button">Book Now</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At Tren Photography, we specialize in capturing the essence of your most cherished moments. With a team of highly skilled and experienced photographers, we are dedicated to providing exceptional wedding and event photography services. Our passion lies in immortalizing authentic emotions, preserving the beauty and joy of every special occasion.
+
+        With an unwavering commitment to excellence, Tren Photography understands the significance of your big day.</p>
+        <p> We believe that every event is a unique narrative waiting to be told through the lens. Our photographers possess a keen eye for detail, allowing them to artistically compose each shot, capturing the subtle nuances, raw emotions, and intricate beauty that make your wedding or event truly extraordinary.
+        
+        With years of experience in the industry, Tren Photography has developed a reputation for delivering stunning and timeless memories. We pride ourselves on creating a comfortable and relaxed atmosphere, ensuring that you and your loved ones feel at ease throughout the entire process. </p>
+        <P>From the grandest of celebrations to intimate gatherings, we are here to document your story with sensitivity, passion, and utmost professionalism.
+        
+        Remember, this description aims to portray a professional and attractive image to potential clients. It highlights your team's expertise, dedication, and artistic approach to capturing special moments.</p>
+        <p> Feel free to adapt and customize the content to align with your brand's voice and style.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="slideshow">
+        <img src="file:///C:\Users\being\OneDrive\Desktop\New folder\Picsart_23-07-05_17-07-11-996.png" alt="Photo 1" class="active">
+        <img src="file:///C:\Users\being\OneDrive\Desktop\New folder\Picsart_23-07-05_17-13-53-129.png" alt="Photo 2">
+        <img src="file:///C:\Users\being\OneDrive\Desktop\New folder\Picsart_23-07-05_17-14-45-572.png" alt="Photo 3">
+        <img src="file:///C:\Users\being\OneDrive\Desktop\New folder\Picsart_23-07-05_17-19-02-630.png" alt="Photo 4">
+        <img src="file:///C:\Users\being\OneDrive\Desktop\New folder\Picsart_23-07-05_17-19-42-296.png" alt="Photo 5">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>For inquiries and bookings, please fill out the form below or reach out to us directly:</p>
+      <ul>
+        <li>Email: info@exTrens.com</li>
+        <li>Whatsapp: <a href="https://wa.me/917452895751" target="_blank">+91 7452895751</a></li>
+      </ul>
+    
+<script>
+  function toggleMute() {
+    var video = document.getElementById('video');
+    if (video.muted) {
+      video.muted = false;
+      document.getElementById('muteButton').textContent = 'Mute';
+    } else {
+      video.muted = true;
+      document.getElementById('muteButton').textContent = 'Unmute';
+    }
+  }
+
+</script>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Tren Photography. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    var slideshowImages = document.querySelectorAll('.slideshow img');
+    var currentImageIndex = 0;
+  
+    function startSlideshow() {
+      setInterval(changeImage, 2500); // Adjust the duration between image changes (in milliseconds) as needed
+    }
+  
+    function changeImage() {
+      slideshowImages[currentImageIndex].classList.remove('active');
+      currentImageIndex = (currentImageIndex + 1) % slideshowImages.length;
+      slideshowImages[currentImageIndex].classList.add('active');
+    }
+  
+    startSlideshow();
+  </script>
+</body>
+</html>
+
